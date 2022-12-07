@@ -62,14 +62,14 @@ int menu()
     printf("1 -Yeni Kayit\n");
     printf("2 -Kayit Ara\n");
     printf("3 -Kayitlari Listele\n");
-    printf("4 -Kayýtlarý Dosyaya kaydet\n");
-    printf("5 -Dosyadaki kayýtlarý  listeye yükle\n");
-    printf("0 -Çýkýþ\n");
+    printf("4 -Kayıtları Dosyaya kaydet\n");
+    printf("5 -Dosyadaki kayıtları  listeye yükle\n");
+    printf("0 -Çıkış\n");
 
 
     do
     {
-        printf("Yapmak istediðiniz iþlemi tuþlayýnýz[0-5]:");
+        printf("Yapmak istediğiniz işlemi tuşlayınız[0-5]:");
         secim=getche()-'0';
         printf("\n");
 
@@ -98,7 +98,7 @@ void kayit()
     printf("Adres:");
     girisAl(adres[cnt]);
     cnt++;
-    printf("Kayýt tamamlandý...\n");
+    printf("Kayıt tamamlandı...\n");
 
 
 
@@ -128,7 +128,7 @@ void kisiAra()
     if(sayac==0)
     {
         system("cls");
-        printf("\n%s isimli kiþi kayýt listesinde bulunamadi...",aranan);
+        printf("\n%s isimli kişi kayıt listesinde bulunamadi...",aranan);
     }
 
     else
@@ -159,11 +159,11 @@ void listele()
     }
     if(sayac==0)
     {
-        printf("\n  kiþi kayýt listesinde  bulunamadý... \n");
+        printf("\n  kişi kayıt listesinde  bulunamadı... \n");
     }
     else
     {
-        printf("\n %d kiþi kaydý var",sayac);
+        printf("\n %d kişi kaydı var",sayac);
     }
 
 
@@ -175,7 +175,7 @@ void dosyayakaydet()
     FILE *ptr;
     if((ptr=fopen("musteriler.txt","w"))==NULL)
     {
-        printf("Dosya oluþturulamadý...");
+        printf("Dosya oluþturulamadı...");
         exit(1);
     }
     int i=0;
@@ -188,9 +188,9 @@ void dosyayakaydet()
     }
     fclose(ptr);
     if(i==0)
-        printf("\nKayýt olmadýðý için dosyaya kaydedilemedi..\n");
+        printf("\nKayıt olmadığı için dosyaya kaydedilemedi..\n");
     else
-        printf("\n%d kiþi kaydý dosyada oluþturuldu.\n",i);
+        printf("\n%d kişi kaydı dosyada oluşturuldu.\n",i);
 
 }
 void dosyadanoku()
@@ -200,7 +200,7 @@ void dosyadanoku()
     FILE *ptr;
     if((ptr=fopen("musteriler.txt","r"))==NULL)
     {
-        printf("Dosya bulunamadý...");
+        printf("Dosya bulunamadı...");
         exit(1);
     }
     int i=0;
@@ -212,9 +212,9 @@ void dosyadanoku()
     }
     fclose(ptr);
     if(cnt==0)
-        printf("\nDosyada kayýt olmadýðý için dosya okuma iþlemi baþarýsýz..\n");
+        printf("\nDosyada kayıt olmadığı için dosya okuma işlemi başarısız..\n");
     else
-        printf("\n%d kiþi listeye aktarýldý.\n",i);
+        printf("\n%d kişi listeye aktarıldı.\n",i);
 
 
 
