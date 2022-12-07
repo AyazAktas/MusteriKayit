@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1670329389 source:c:\users\poyraz\documents\sites\ayaz\projeler\musterikayit.c\main.c
+	<time.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<conio.h>
+	<locale.h>
+
